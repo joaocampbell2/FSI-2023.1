@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechHub - Cursos Online</title>
+  <link rel="stylesheet" href="empresa.css">
+  <script src="usuario.js"></script>
+  <link rel="icon" href="logo.png">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    .form-group {
+      margin-bottom: 10px;
+    }
+  
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+  
+    .btn-group {
+      margin-top: 20px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+      border-radius: 3px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+  
+    .btn-secondary {
+      background-color: #ccc;
+    }
+  
+    .btn-group:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .btn-group .btn {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .error {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body onload="verificarAutenticacao();">  
+    <header>
+    <h1>TechHub</h1>
+  </header>
+  
+    <nav>
+        <ul>
+          <li><a href="empresa.html">Home</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="areaCliente.html">Area Cliente</a></li>
+    
+        </ul>
+      </nav>
+        <div class="container">
+          <h2>Cadastro e Login</h2>
+      
+          <div id="cadastro">
+            <div class="form-group">
+              <label for="cadastro-nome">Nome:</label>
+              <input type="text" id="cadastro-nome">
+            </div>
+          
+            <div class="form-group">
+              <label for="cadastro-email">E-mail:</label>
+              <input type="email" id="cadastro-email">
+            </div>
+          
+            <div class="form-group">
+              <label for="cadastro-senha">Senha:</label>
+              <input type="password" id="cadastro-senha">
+            </div>
+      
+            <div class="btn-group">
+              <button class="btn" onclick="realizarCadastro()">Cadastrar</button>
+              <button class="btn btn-secondary" onclick="alternarFormulario()">Já tenho uma conta</button>
+            </div>
+          </div>
+      
+          <div id="login" style="display: none;">
+            <div class="form-group">
+              <label for="login-email">E-mail:</label>
+              <input type="email" id="login-email">
+            </div>
+          
+            <div class="form-group">
+              <label for="login-senha">Senha:</label>
+              <input type="password" id="login-senha">
+            </div>
+      
+            <div class="btn-group">
+              <button class="btn" onclick="realizarLogin()">Entrar</button>
+              <button class="btn btn-secondary" onclick="alternarFormulario()">Criar uma nova conta</button>
+            </div>
+          </div>
+      
+          <div id="mensagem" class="error" style="display: none;"></div>
+        </div>
+        
+      </body>
+</html>
