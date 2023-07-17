@@ -143,3 +143,41 @@ body {
   .meio {
     background-color: #8b1117;
   }
+
+  .course-buttons-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .course-button-2 {
+    flex-basis: calc(35% - 30px);
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-button-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-button-2:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-button-2-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
