@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechHub - Cursos Online</title>
   <link rel="stylesheet" href="empresa.css">
-  <link rel="icon" href="logo.png">
+  <link rel="icon" href="imgs/logo.png">
+  <script src="usuario.js"></script>
+
 </head>
 
-<body>
+<body onload="verificarAutenticacao();">
   <header>
-    <img src="logo.png" width="250px">
+    <img src="imgs/logo.png" width="250px">
   </header>
 
   <nav>
@@ -19,7 +21,7 @@
       <li><a href="empresa.html">Home</a></li>
       <li><a href="cursos.html">Cursos</a></li>
       <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="login.html">Área Cliente</a></li>
+      <li><a id="login-nav" href="login.html">Área Cliente</a></li>
 
     </ul>
   </nav>
@@ -36,16 +38,15 @@
       <a href="ia.html" class="course-button" target="externo"><img src="https://www.coddera.com/wp-content/uploads/2021/12/0511-BLOG-1.png" alt="Imagem de IA na Comunicação"><span class="course-button-text">IA na Comunicação</span></a>
     </div>
 
-    <!-- Restante do conteúdo da página -->
 
   </div>
 
   <footer>
     <p>&copy; 2023 TechHub. Todos os direitos reservados.</p>
     <p>contato@techhub.com</p>
-    <a href="https://github.com/caioabcoutinho" target="externo"><img class="logo" src="github-caio.png" width="30px"></a>
-    <a href="https://github.com/joaocampbell2"  target="externo"><img class="logo" src="github-joao.png" width="30px"></a>
-    <a href="https://github.com/julia-tagliari" target="externo"><img class="logo" src="github-julia.png.png" width="30px"></a>
+    <a href="https://github.com/caioabcoutinho" target="externo"><img class="logo" src="imgs/github-caio.png" width="30px"></a>
+    <a href="https://github.com/joaocampbell2"  target="externo"><img class="logo" src="imgs/github-joao.png" width="30px"></a>
+    <a href="https://github.com/julia-tagliari" target="externo"><img class="logo" src="imgs/github-julia.png.png" width="30px"></a>
   </footer>
 
   <script src="empresa.js"></script>

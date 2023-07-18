@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub - Cursos Online</title>
+  <link rel="stylesheet" href="empresa.css">
+  <link rel="icon" href="imgs/logo.png">
+  <script src="usuario.js"></script>
+</head>
+
+<body onload="verificarAutenticacao();">
+  <header>
+    <img src="imgs/logo.png" width="250px">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="empresa.html">Home</a></li>
+      <li><a href="cursos.html">Cursos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="login.html">Área Cliente</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Pagamento</h2>
+    <form>
+      <div class="form-group">
+        <label for="tipoCartao">Tipo de Cartão</label>
+        <select id="tipoCartao" name="tipoCartao">
+          <option value="credito">Cartão de Crédito</option>
+          <option value="debito">Cartão de Débito</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="numeroCartao">Número do Cartão</label>
+        <input type="text" id="numeroCartao" name="numeroCartao" required>
+      </div>
+      <div class="form-group">
+        <label for="validadeCartao">Validade do Cartão</label>
+        <input type="date" id="validadeCartao" name="validadeCartao" required>
+      </div>      
+      <div class="form-group">
+        <label for="codigoCartao">Código de Segurança</label>
+        <input type="text" id="codigoCartao" name="codigoCartao" required>
+      </div>
+      <button onclick="pagar()" class="buy-button" type="submit">Pagar</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 TechHub. Todos os direitos reservados.</p>
+    <p>contato@techhub.com</p>
+    <a href="https://github.com/caioabcoutinho" target="externo"><img class="logo" src="imgs/github-caio.png" width="30px"></a>
+    <a href="https://github.com/joaocampbell2"  target="externo"><img class="logo" src="imgs/github-joao.png" width="30px"></a>
+    <a href="https://github.com/julia-tagliari" target="externo"><img class="logo" src="imgs/github-julia.png.png" width="30px"></a>
+  </footer>
+
+  <script src="empresa.js"></script>
+</body>
+
+</html>

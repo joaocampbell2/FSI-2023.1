@@ -170,3 +170,144 @@ body {
   font-weight: bolder;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.container-login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.course-buttons-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-button-2 {
+  flex-basis: calc(35% - 30px);
+  margin-bottom: 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.course-button-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.course-button-2:hover {
+  transform: scale(1.05);
+}
+
+.course-button-2-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;}
+
+.course-buttons-3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.course-button-3 {
+    flex-basis: calc(40% - 30px);
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    
+}
+  
+.course-button-3 img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+  
+.course-button-3:hover {
+    transform: scale(1.05);
+}
+  
+.course-button-3-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 3px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.cursosContainer{
+  margin-bottom: 20px;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+}
+
+.btn-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn-group .btn {
+  float: left;
+  margin-right: 10px;
+}
+.course-button-text-3{
+  position: absolute;
+  bottom: 10px;
+  height: 70px;
+  left: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}

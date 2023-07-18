@@ -92,7 +92,7 @@ function exibirFormularioCadastro() {
     }
     else{
         localStorage.setItem('usuarioLogado',JSON.stringify(usuario));
-        window.location.href = 'areaCliente.html'
+        window.location.href = 'areaCliente.html';
     }
 }
 
@@ -100,30 +100,28 @@ function verificarAutenticacao() {
     // Verifica se o usuário está logado
     var usuarioLogado = localStorage.getItem('usuarioLogado');
     
-
-    
-    
-    
-    if (window.location.href.includes("login.html")){
-        if(usuarioLogado){
-            window.location.href = 'areaCliente.html';
-        }
-    }    
-    else{
-        if(!usuarioLogado){
+    if(!usuarioLogado){
+      document.getElementById('login-nav').innerHTML = 'Faça Login';
+      if(window.location.href.includes("areaCliente.html")){ 
         alert('Você não está logado');
         window.location.href = 'login.html';
-        }
-        else{
-            return true;
-        }
+        return false;
+
+      }
+
+    }
+    else{
+      if (window.location.href.includes("login.html")){
+            window.location.href = 'areaCliente.html';  
+    }
+    return true;
     }
 
 
   }
 
 function comprarCursos(curso){
-    
+
     logado = verificarAutenticacao()
     if(logado){
         var usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
@@ -136,7 +134,7 @@ function comprarCursos(curso){
             }
         }
         
-
+      
         
         for (let i = 0;i < usuarios.length;i++){
             if (usuarios[i].email == usuarioLogado.email){
@@ -145,8 +143,7 @@ function comprarCursos(curso){
             }
         }
 
-        alert("Curso comprado!!!");
-
+        window.location.href = "pagamento.html";
         usuarioLogado.cursos.push(curso);
 
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
@@ -155,8 +152,15 @@ function comprarCursos(curso){
 
 
     }
+    else{
+      alert('Você não está logado');
+    }
 }
 
+function pagar(){
+  alert('Curso comprado com sucesso!!!');
+  window.location.href = "areaCliente.html";
+}
 
 
 function logout(){
@@ -171,23 +175,24 @@ function informacoes(){
     let informacao = JSON.parse(localStorage.getItem("usuarioLogado"));
     let saida = [];
     let container = document.getElementById("informacoes");
-    
+    let cursosContainer = document.getElementById("cursosContainer");
     let cursos = [];
 
 
+    saida.push(
+        '<p>Nome: ' + informacao.nome + '<br>Email: ' + informacao.email);
+    container.innerHTML = saida.join('');
+
     if(informacao.cursos.length > 0){
-        for (let i = 0; i < informacao.cursos.length;i++){
-            cursos.push('' + informacao.cursos[i]);
-        }
-        cursos.join('');
+      for (let i = 0; i < informacao.cursos.length;i++){
+        cursos.push('<a href="#"class="course-button-3" target="externo"><img src="imgs/' + informacao.cursos[i] + '.png" alt="'+informacao.cursos[i]+'"><span class="course-button-text-3 ">'+ informacao.cursos[i] + '</span></a>');
+      }
+      cursos.join('');
     }
     else{
-        cursos = [];
+      cursos = [];
     }
-
-    saida.push(
-        '<p>Nome: ' + informacao.nome + '<br>Email: ' + informacao.email + '<br>Cursos adquiridos: '+ cursos +'</p>');
-    container.innerHTML = saida.join('');
+    cursosContainer.innerHTML = cursos;
 
 }
 
