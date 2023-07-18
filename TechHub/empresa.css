@@ -254,6 +254,13 @@ body {
     font-size: 16px;
 }
 
+.preco{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+
+
+}
 .form-group {
   margin-bottom: 10px;
 }
