@@ -100,21 +100,25 @@ function verificarAutenticacao() {
     // Verifica se o usuário está logado
     var usuarioLogado = localStorage.getItem('usuarioLogado');
     
-    if(!usuarioLogado){
-      document.getElementById('login-nav').innerHTML = 'Faça Login';
-      if(window.location.href.includes("areaCliente.html")){ 
+
+    
+    
+    
+    if (window.location.href.includes("login.html")){
+        if(usuarioLogado){
+            window.location.href = 'areaCliente.html';
+        }
+    }    
+    else{
+        if(!usuarioLogado){
         alert('Você não está logado');
         window.location.href = 'login.html';
-      }
-    return false;
+        }
+        else{
+            return true;
+        }
+    }
 
-    }
-    else{
-      if (window.location.href.includes("login.html")){
-            window.location.href = 'areaCliente.html';  
-    }
-    return true;
-    }
 
   }
 
