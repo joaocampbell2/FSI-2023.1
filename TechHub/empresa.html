@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechHub - Cursos Online</title>
+  <script src="usuario.js"></script>
   <link rel="stylesheet" href="empresa.css">
   <link rel="icon" href="logo.png">
 </head>
 
-<body>
+<body onload="verificarAutenticacao()">
   <header>
     <h1>TechHub</h1>
   </header>
@@ -19,7 +20,7 @@
       <li><a href="empresa.html">Home</a></li>
       <li><a href="cursos.html">Cursos</a></li>
       <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="login.html">Area Cliente</a></li>
+      <li><a id='login-nav' href="login.html">Area Cliente</a></li>
 
     </ul>
   </nav>
