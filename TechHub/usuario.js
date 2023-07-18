@@ -160,6 +160,8 @@ function comprarCursos(curso){
 function pagar(){
   alert('Curso comprado com sucesso!!!');
   window.location.href = "areaCliente.html";
+  window.location.href = "areaCliente.html";
+
 }
 
 
@@ -167,7 +169,6 @@ function logout(){
 
     localStorage.removeItem('usuarioLogado');
     window.location.href = 'empresa.html';
-
 
 }
 
@@ -185,7 +186,7 @@ function informacoes(){
 
     if(informacao.cursos.length > 0){
       for (let i = 0; i < informacao.cursos.length;i++){
-        cursos.push('<a href="#"class="course-button-3" target="externo"><img src="imgs/' + informacao.cursos[i] + '.png" alt="'+informacao.cursos[i]+'"><span class="course-button-text-3 ">'+ informacao.cursos[i] + '</span></a>');
+        cursos.push('<a target="externo"href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"class="course-button-3" target="externo"><img src="imgs/' + informacao.cursos[i] + '.png" alt="'+informacao.cursos[i]+'"><span class="course-button-text-3">'+ informacao.cursos[i] + '</span></a>');
       }
       cursos.join('');
     }

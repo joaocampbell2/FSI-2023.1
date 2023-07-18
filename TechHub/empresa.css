@@ -152,8 +152,8 @@ body {
 }
 
 .retangulo-vermelho{
-    background-color:rgb(144, 21, 30);
-    border-radius: 10px;
+    background-color:rgb(177, 55, 55);
+    border-radius: 32px;
     padding: 20px;
     color: #fff;
     text-align: center;
@@ -234,8 +234,8 @@ body {
 }
   
 .course-button-3 img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -279,17 +279,18 @@ body {
   padding: 8px 16px;
   border-radius: 3px;
   border: none;
-  background-color: #4CAF50;
+  background-color:  rgb(144, 21, 30);
   color: white;
   cursor: pointer;
 }
 
 .cursosContainer{
   margin-bottom: 20px;
+  display:flex;
 }
 
 .btn-secondary {
-  background-color: #ccc;
+  background-color: rgb(12, 12, 12);
 }
 
 .btn-group:after {
